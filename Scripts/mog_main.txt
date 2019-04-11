@@ -1,0 +1,70 @@
+//難易度（ゲームモード）選択
+栞 mog_select
+
+クリア
+~バックログリセット
+
+~ボタン基本素材 btn_sel.png btn_sel@.png btn_sel.png
+ボタン sel1 340 60 90 スクリプト mog_main.txt mog_start 1 false
+ボタン文字 sel1 NotoSansCJKjp-Regular.ttf 24 "配置1"
+~ボタン sel1d 340 140 90 スクリプト mog_main.txt mog_start 1 true
+ボタン文字 sel1d NotoSansCJKjp-Regular.ttf 24 "配置1デバッグ文字表示"
+~ボタン sel2 340 220 90 スクリプト mog_main.txt mog_start 2
+ボタン文字 sel2 NotoSansCJKjp-Regular.ttf 24 "配置2"
+~ボタン sel3 340 300 90 スクリプト mog_main.txt mog_start 3 true
+ボタン文字 sel3 NotoSansCJKjp-Regular.ttf 24 "配置1（高難易度）"
+~ボタン sel4 340 380 90 スクリプト mog_main.txt mog_start 4
+ボタン文字 sel4 NotoSansCJKjp-Regular.ttf 24 "カニ配置1"
+~ボタン sel5 340 460 90 スクリプト mog_main.txt mog_start 5
+ボタン文字 sel5 NotoSansCJKjp-Regular.ttf 24 "カニスペシャル"
+	
+~待機 ボタン選択
+//ゲーム開始後待機位置。処理はluaスクリプトに任せる
+~待機 読み込み続行禁止
+
+// ゲーム開始用------------------------
+栞 mog_start _mode _debug
+~アウト sel.*
+
+//もぐらたたきlua呼び出し
+~スクリプト lua/Mog.lua			//もぐら基本
+~スクリプト lua/MogChar.lua		//キャラクター設定
+~スクリプト lua/MogAxes.lua		//表示座標設定
+~スクリプト lua/MogDebug.lua	//デバッグ用設定
+//設定反映
+~スクリプト lua/mogura_setting.lua
+~lua mogura_setting({{_mode}},{{_debug}})
+//初期化
+~スクリプト lua/mogura.lua
+~lua mogura_init()
+~script_fin
+// ---------------------------------------
+
+// 演出秒更新用------------------------
+栞 mog_update
+~スクリプト lua/mogura_func.lua
+~lua mogura_update()
+~script_fin
+// ---------------------------------------
+// 叩き用---------------------------------
+栞 mog_hit _hit
+~スクリプト lua/mogura_func.lua
+~lua mogura_hit({{_hit}})
+~script_fin
+// ----------------------------------------
+
+// 終了-----------------------------------
+栞 mog_finish
+~スクリプト lua/mogura.lua
+~lua mogura_end()
+//-----------------------------------------
+
+スクリプト system\sys_menu.txt
+スクリプト system\sys_macros.txt
+~文字窓下段
+
+~文字色 255 255 125
+"total_point：「{{total_point}} 」
+.おしまい\w
+
+~待機 読み込み続行禁止
