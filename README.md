@@ -1,10 +1,10 @@
-Light.vn + lua もぐらたたき サンプル
+Light.vn + Lua もぐらたたき サンプル
 =========
 
-`Light.vnがもっと俺に輝けと囁いてる`
+`Light.vnが俺にもっと輝けと囁いてる`
 
 今日よりもっと輝きたい。俺も。そしてあなたも。  
-Light.vnとluaで仲良くなるためのソリューションを提供します。  
+Light.vnとLuaで仲良くなるためのソリューションを提供します。  
 もぐらたたきのサンプルコードです。
 
 ## スクリーンショット
@@ -37,7 +37,7 @@ Light.vnの仕様で実装できない機能
 ---------
 >Light.vnバージョン7.1.0時点
 - webブラウザ非対応
-  - 代替案：[Corona](https://coronalabs.com/) [Fangari](https://fengari.io/)
+  - 代替案：[Corona](https://coronalabs.com/) [Fengari](https://fengari.io/)
 - もぐらキャラ（ボタン）の拡大・縮小設定
 - もぐらキャラ（ボタン）が２キャラ以上重なる場合、２キャラとも同時に押下判定される
 - マウスクリック箇所にエフェクトを発生させられない
@@ -60,7 +60,7 @@ LightEditor.exeでmog_main.txtを開きライブプレビューで動作が確�
 
 使用させていただいた画像のライセンスは以下の作者様に権利があります。
 
-### 画像リンク
+#### 画像リンク
   - 立ち絵・背景：[ひしあと世界の選択肢 | SoulEngineProject](http://soulengineproject.com/lightvn-x-01-hisia/)
   - カニ：[ニカ](https://twitter.com/nika_hitsuji/)
   - 背景（砂浜）：[きまぐれアフター](http://www5d.biglobe.ne.jp/~gakai/)
@@ -73,7 +73,7 @@ LightEditor.exeでmog_main.txtを開きライブプレビューで動作が確�
 『ファッションコミュ障くんとビジネスボッチちゃん』制作中です。  
 [![ファッションコミュ障くんとビジネスボッチちゃん](https://gist.github.com/mmmesooo/eaf62a5cabb282f23789e94bb48e83a6/raw/5bc6057a7c54ae223124b6b42cf680fdeb0efd7e/topimg_fashion.jpg)](http://3on10.com/fashion)
 
-Light.vnもluaも使用する予定はいまのところありませんが  
+Light.vnもLuaも使用する予定はいまのところありませんが  
 よろしくお願いいたします。なますでした。
 
 
